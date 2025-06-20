@@ -1,0 +1,19 @@
+<div class="admin-page">
+  <h2>قائمة الكتب</h2>
+
+  <div class="dashboard-container" *ngIf="books.length > 0; else noBooks">
+    <div class="book-card" *ngFor="let book of books">
+      <span>{{ book.title }} (ISBN: {{ book.isbn }})</span>
+      <div class="actions">
+        <button (click)="addBook()">إضافة</button>
+        <button (click)="editBook(book.id)">تعديل</button>
+        <button (click)="deleteBook(book.id)">مسح</button>
+        <button (click)="viewDetails(book.id)">عرض التفاصيل</button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noBooks>
+    <p>لا يوجد كتب للعرض.</p>
+  </ng-template>
+</div>

@@ -1,0 +1,23 @@
+<div class="add-edit-page">
+  <h2>تعديل الكتاب</h2>
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="title">عنوان الكتاب</label>
+      <input id="title" formControlName="title" type="text">
+    </div>
+    <div>
+      <label for="author">المؤلف</label>
+      <input id="author" formControlName="author" type="text">
+    </div>
+    <div>
+      <label for="isbn">ISBN</label>
+      <input id="isbn" formControlName="isbn" type="text">
+    </div>
+    <div>
+      <label for="publication_date">تاريخ النشر</label>
+      <input id="publication_date" formControlName="publication_date" type="date">
+    </div>
+    <button type="submit" [disabled]="editForm.invalid">حفظ التعديل</button>
+    <button type="button" (click)="router.navigate(['/dashboard/admin'])">إلغاء</button>
+  </form>
+</div>

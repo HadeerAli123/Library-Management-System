@@ -1,0 +1,15 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">الاسم</label>
+    <input id="name" formControlName="name" type="text">
+  </div>
+  <div>
+    <label for="email">الإيميل</label>
+    <input id="email" formControlName="email" type="email">
+  </div>
+  <div>
+    <label for="password">كلمة السر</label>
+    <input id="password" formControlName="password" type="password">
+  </div>
+  <button type="submit" [disabled]="!registerForm.valid">تسجيل</button>
+</form>

@@ -1,0 +1,118 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ecf0f1; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+p, label {
+  font-size: 16px;
+  color: #34495e;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+}
+
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+}
+
+
+.admin-page button:nth-child(1) { 
+  background-color: #27ae60; 
+  color: white;
+}
+
+.admin-page button:nth-child(2) { 
+  background-color: #3498db;
+  color: white;
+}
+
+.admin-page button:nth-child(3) { 
+  background-color: #e74c3c; 
+  color: white;
+}
+
+.admin-page button:nth-child(4) {
+  background-color: #f1c40f; 
+  color: #333;
+}
+
+.add-edit-page button[type="submit"] {
+  background-color: #27ae60; 
+  color: white;
+}
+
+.add-edit-page button[type="button"] {
+  background-color: #7f8c8d; 
+  color: white;
+}
+
+.detail-page button {
+  background-color: #3498db;
+  color: white;
+}

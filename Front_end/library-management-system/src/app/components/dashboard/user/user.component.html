@@ -1,0 +1,9 @@
+<div class="dashboard">
+  <h2>لوحة تحكم المستخدم</h2>
+  <div class="controls">
+    <button (click)="borrowBook()">اقتراض كتاب</button>
+  </div>
+  <ul>
+    <li *ngFor="let book of borrowedBooks">{{ book.book.title }} (تاريخ الاقتراض: {{ book.borrow_date }})</li>
+  </ul>
+</div>

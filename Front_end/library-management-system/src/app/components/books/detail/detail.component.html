@@ -1,0 +1,9 @@
+<div *ngIf="book">
+  <h2>{{ book.title }}</h2>
+  <p>Author: {{ book.author }}</p>
+  <p>ISBN: {{ book.isbn }}</p>
+  <p>Publication Date: {{ book.publication_date }}</p>
+</div>
+<div *ngIf="!book">
+  <p>لا يوجد تفاصيل للكتاب.</p>
+</div>
